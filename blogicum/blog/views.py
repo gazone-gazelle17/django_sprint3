@@ -19,7 +19,7 @@ def post_detail(request, post_id):
         pub_date__lte=datetime.now(),
         is_published=True,
         category__is_published=True
-        )
+    )
     )
     context = {'post': post}
     return render(request, 'blog/detail.html', context)
